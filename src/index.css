@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background-rgb: 255 255 255;
+    --foreground-rgb: 0 0 0;
+    --accent-rgb: 255 255 0;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+    --primary: 0 0 0;
+    --primary-foreground: 255 255 255;
+    --muted: 245 245 245;
+    --muted-foreground: 107 114 128;
+    --border: 0 0 0;
+    --ring: 0 0 0;
+    --card: 255 255 255;
+    --card-foreground: 0 0 0;
+    --popover: 255 255 255;
+    --popover-foreground: 0 0 0;
+    --secondary: 245 245 245;
+    --secondary-foreground: 0 0 0;
+    --accent: 255 255 0;
+    --accent-foreground: 0 0 0;
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+    --input: 0 0 0;
+    --radius: 0rem;
+  }
+  .dark {
+    --background-rgb: 0 0 0;
+    --foreground-rgb: 255 255 255;
+    --accent-rgb: 255 255 0;
+    --background: 0 0 0;
+    --foreground: 255 255 255;
+    --primary: 255 255 255;
+    --primary-foreground: 0 0 0;
+    --muted: 23 23 23;
+    --muted-foreground: 163 163 163;
+    --border: 255 255 255;
+    --ring: 255 255 255;
+    --card: 0 0 0;
+    --card-foreground: 255 255 255;
+    --popover: 0 0 0;
+    --popover-foreground: 255 255 255;
+    --secondary: 23 23 23;
+    --secondary-foreground: 255 255 255;
+    --accent: 255 255 0;
+    --accent-foreground: 0 0 0;
+    --destructive: 153 27 27;
+    --destructive-foreground: 255 255 255;
+    --input: 255 255 255;
+  }
+  * {
+    @apply border-border rounded-none;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-white text-black;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+  .dark body {
+    @apply bg-black text-white;
+  }
+  .prose {
+    --tw-prose-body: theme(colors.black);
+    --tw-prose-headings: theme(colors.black);
+    --tw-prose-lead: theme(colors.black);
+    --tw-prose-links: theme(colors.black);
+    --tw-prose-bold: theme(colors.black);
+    --tw-prose-counters: theme(colors.black);
+    --tw-prose-bullets: theme(colors.black);
+    --tw-prose-hr: theme(colors.black);
+    --tw-prose-quotes: theme(colors.black);
+    --tw-prose-quote-borders: theme(colors.black);
+    --tw-prose-captions: theme(colors.black);
+    --tw-prose-code: theme(colors.black);
+    --tw-prose-pre-code: theme(colors.black);
+    --tw-prose-pre-bg: theme(colors.brutalist-yellow);
+    --tw-prose-th-borders: theme(colors.black);
+    --tw-prose-td-borders: theme(colors.black);
+  }
+  .dark .prose {
+    --tw-prose-body: theme(colors.white);
+    --tw-prose-headings: theme(colors.white);
+    --tw-prose-lead: theme(colors.white);
+    --tw-prose-links: theme(colors.white);
+    --tw-prose-bold: theme(colors.white);
+    --tw-prose-counters: theme(colors.white);
+    --tw-prose-bullets: theme(colors.white);
+    --tw-prose-hr: theme(colors.white);
+    --tw-prose-quotes: theme(colors.white);
+    --tw-prose-quote-borders: theme(colors.white);
+    --tw-prose-captions: theme(colors.white);
+    --tw-prose-code: theme(colors.black);
+    --tw-prose-pre-code: theme(colors.black);
+    --tw-prose-pre-bg: theme(colors.brutalist-yellow);
+    --tw-prose-th-borders: theme(colors.white);
+    --tw-prose-td-borders: theme(colors.white);
+  }
+  .prose pre {
+    @apply border-2 border-black p-4;
+  }
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply font-bold uppercase;
+  }
+}
